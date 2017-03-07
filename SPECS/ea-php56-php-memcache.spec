@@ -6,7 +6,8 @@
 Name: %{scl_version}-php-memcache
 Version: 2.2.7
 Summary: memcache extension for %{scl_version}
-Release: 1%{?dist}
+%define release_prefix 1
+Release: %{release_prefix}%{?dist}.cpanel
 License: MIT
 Group: Programming/Languages
 URL: https://pecl.php.net/package/memcache

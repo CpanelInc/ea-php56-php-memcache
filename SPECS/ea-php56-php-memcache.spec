@@ -6,7 +6,7 @@
 Name: %{scl_version}-php-memcache
 Version: 2.2.7
 Summary: memcache extension for %{scl_version}
-%define release_prefix 1
+%define release_prefix 2
 Release: %{release_prefix}%{?dist}.cpanel
 License: MIT
 Group: Programming/Languages
@@ -47,6 +47,9 @@ install -m 644 %{SOURCE1} %{buildroot}/%{ext_prefix}/%{conf_dir}/
 %config /%{ext_prefix}/%{conf_dir}/memcache.ini
 
 %changelog
+* Wed Apr 08 2020 Daniel Muey <dan@cpanel.net> - 2.2.7-2
+- ZC-6515: Promote from experimental
+
 * Fri Mar  5 2017 Jack Hayhurst <jack@deleteos.com> - 0.2
 - Fixed package name, entire RPM is now working.
 

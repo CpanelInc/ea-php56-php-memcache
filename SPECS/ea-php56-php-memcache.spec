@@ -51,6 +51,7 @@ install -m 644 %{SOURCE1} %{buildroot}/%{ext_prefix}/%{conf_dir}/
 %changelog
 * Thu Sep 21 2023 Dan Muey <dan@cpanel.net> - 2.2.7-6
 - ZC-11194: Remove unnecessary `BuildRequires` of php-cli
+- disable C9
 
 * Tue Dec 28 2021 Dan Muey <dan@cpanel.net> - 2.2.7-5
 - ZC-9589: Update DISABLE_BUILD to match OBS

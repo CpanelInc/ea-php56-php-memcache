@@ -6,7 +6,7 @@
 Name: %{scl_version}-php-memcache
 Version: 2.2.7
 Summary: memcache extension for %{scl_version}
-%define release_prefix 5
+%define release_prefix 6
 Release: %{release_prefix}%{?dist}.cpanel
 License: MIT
 Group: Programming/Languages
@@ -19,7 +19,7 @@ Source1: memcache.ini
 #BuildRequires: libyaml-devel
 Requires: %{scl_version}-php-common
 Requires: %{scl_version}-php-cli
-BuildRequires: %{scl_version} %{scl_version}-php-cli
+BuildRequires: %{scl_version}
 
 %description
 Memcached is a caching daemon designed especially for  dynamic web applications
@@ -49,6 +49,9 @@ install -m 644 %{SOURCE1} %{buildroot}/%{ext_prefix}/%{conf_dir}/
 %config /%{ext_prefix}/%{conf_dir}/memcache.ini
 
 %changelog
+* Thu Sep 21 2023 Dan Muey <dan@cpanel.net> - 2.2.7-6
+- ZC-11194: Remove unnecessary `BuildRequires` of php-cli
+
 * Tue Dec 28 2021 Dan Muey <dan@cpanel.net> - 2.2.7-5
 - ZC-9589: Update DISABLE_BUILD to match OBS
 
